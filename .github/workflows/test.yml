@@ -3,17 +3,17 @@ stages:
   - test
   - deploy
 
-build-job:
-  stage: build
-  script:
-    - python -m build
+  build-job:
+    stage: build
+    script:
+      - python -m build
 
-test-job:
-  stage: test
-  script:
-    - pytest tests/
+  test-job:
+    stage: test
+    script:
+      - pytest tests/
 
-deploy-job:
-  stage: deploy
-  script:
-    - ./deploy.sh
+  deploy-job:
+    stage: deploy
+    script:
+      - ./deploy.sh
